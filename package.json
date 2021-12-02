@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "seeds": "node seeds/index.js",
-    "start": "node server.js"
+    "seeds": "node seeds/index.js"
   },
+  "start": "node server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wolfgarb/tech-blob.git"
