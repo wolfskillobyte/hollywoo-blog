@@ -1,0 +1,36 @@
+{
+  "name": "tech-blob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "seeds": "node seeds/index.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfgarb/tech-blob.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolfgarb/tech-blob/issues"
+  },
+  "homepage": "https://github.com/wolfgarb/tech-blob#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "node": "^17.1.0",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}
