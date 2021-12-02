@@ -3,53 +3,53 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-    username: 'alesmonde0',
-    email: 'nwestnedge0@cbc.ca',
+    username: 'rumham1',
+    email: 'rumham1@cbc.ca',
     password: 'password123'
   },
   {
-    username: 'jwilloughway1',
-    email: 'rmebes1@sogou.com',
+    username: 'jasonbateman',
+    email: 'jasonbateman56@sogou.com',
     password: 'password123'
   },
   {
-    username: 'iboddam2',
-    email: 'cstoneman2@last.fm',
+    username: 'laurencefishburn',
+    email: 'laurencefishburn@last.fm',
     password: 'password123'
   },
   {
-    username: 'dstanmer3',
-    email: 'ihellier3@goo.ne.jp',
+    username: 'alefmoffat32',
+    email: 'alefmoffat32@goo.ne.jp',
     password: 'password123'
   },
   {
-    username: 'djiri4',
-    email: 'gmidgley4@weather.com',
+    username: 'wolfgarrrb',
+    email: 'wolfskill@nasa.com',
     password: 'password123'
   },
   {
-    username: 'msprague5',
-    email: 'larnout5@imdb.com',
+    username: 'mrasparagus',
+    email: 'smellypee@imdb.com',
     password: 'password123'
   },
   {
-    username: 'mpergens6',
-    email: 'hnapleton6@feedburner.com',
+    username: 'misterpeanutbutter',
+    email: 'doggiedoggiewhatnow@feedburner.com',
     password: 'password123'
   },
   {
-    username: 'tpenniell7',
-    email: 'kperigo7@china.com.cn',
+    username: 'blowjohorseman',
+    email: 'boozecruise@china.com.cn',
     password: 'password123'
   },
   {
-    username: 'msabbins8',
-    email: 'lmongain8@google.ru',
+    username: 'dianenguyen',
+    email: 'impublished@google.ru',
     password: 'password123'
   },
   {
-    username: 'jmacarthur9',
-    email: 'bsteen9@epa.gov',
+    username: 'princesscarolyn',
+    email: 'untitledprincesscarolynproject@epa.gov',
     password: 'password123'
   }
 ];
