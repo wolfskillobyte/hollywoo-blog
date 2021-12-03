@@ -104,9 +104,48 @@ router.post('/', (req, res) => {
 });
 
 // UPDATE post title (put route)
-router.put('/:id', (req, res) => {});
+router.put('/:id', (req, res) => {
+  Post.update(
+    {
+      title: req.body.title
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'Post with this ID does not exist!' });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // DELETE post
-router.delete('/:id', (req, res) => {});
+router.delete('/:id', (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'Post not found with this ID' });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
