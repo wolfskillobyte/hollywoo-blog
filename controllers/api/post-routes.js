@@ -128,6 +128,9 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// ==> TO DO ==> upvote route
+router.put('/upvote', (req, res) => {});
+
 // DELETE post
 router.delete('/:id', (req, res) => {
   Post.destroy({
