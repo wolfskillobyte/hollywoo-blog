@@ -110,6 +110,18 @@ router.post('/login', (req, res) => {
   });
 });
 
+// LOGOUT route
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      // 204 successful session end code
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
 // UPDATE user info
 router.put('/:id', (req, res) => {
   // pass in req.body instead to only update what's passed through

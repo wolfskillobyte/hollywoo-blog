@@ -1,31 +1,3 @@
-// SIGNUP form
-async function signupFormHandler(event) {
-  event.preventDefault();
-
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
-  // VALIDATE data
-  if (username && email && password) {
-    // set response to a variable as an object to catch errors
-    const response = await fetch('/api/users', {
-      method: 'post',
-      body: JSON.stringify({
-        username,
-        email,
-        password
-      }),
-      header: { 'Content-Type': 'application/json' }
-    });
-    if (response.ok) {
-      console.log('success');
-    } else {
-      alert(response.statusText);
-    }
-  }
-}
-
 // LOGIN form
 async function loginFormHandler(event) {
   event.preventDefault();
@@ -51,10 +23,41 @@ async function loginFormHandler(event) {
   }
 }
 
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+// SIGNUP form
+async function signupFormHandler(event) {
+  event.preventDefault();
+
+  const username = document.querySelector('#username-signup').value.trim();
+  const email = document.querySelector('#email-signup').value.trim();
+  const password = document.querySelector('#password-signup').value.trim();
+
+  // VALIDATE data
+  if (username && email && password) {
+    // set response to a variable as an object to catch errors
+    const response = await fetch('/api/users', {
+      method: 'post',
+      body: JSON.stringify({
+        username,
+        email,
+        password
+      }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    // check response status
+    if (response.ok) {
+      console.log('success');
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
+    }
+  }
+}
 
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
+
+document
+  .querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
