@@ -103,6 +103,25 @@ router.post('/', (req, res) => {
     });
 });
 
+// THIS ROUTE MUST GO BEFORE THE OTHER PUT ROUTES !!
+// 13.4.4: Otherwise, Express.js will think the word "upvote" is a valid parameter for /:id.
+// upvote route
+router.put('/upvote', (req, res) => {
+  // make sure the session exists first
+  if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Post.upvote(
+      { ...req.body, user_id: req.session.user_id },
+      { Vote, Comment, User }
+    )
+      .then((updatedVoteData) => res.json(updatedVoteData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
+});
+
 // UPDATE post title (put route)
 router.put('/:id', (req, res) => {
   Post.update(
@@ -127,9 +146,6 @@ router.put('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
-// ==> TO DO ==> upvote route
-router.put('/upvote', (req, res) => {});
 
 // DELETE post
 router.delete('/:id', (req, res) => {
