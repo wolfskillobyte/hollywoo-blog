@@ -6,7 +6,6 @@ const sequelize = require('../../config/connection');
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
-    order: [['created_at', 'DESC']],
     // Query configuration
     attributes: [
       'id',
@@ -20,6 +19,7 @@ router.get('/', (req, res) => {
         'vote_count'
       ]
     ],
+    order: [['created_at', 'DESC']],
     include: [
       // comment model
       {
