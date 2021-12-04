@@ -2,110 +2,107 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'Donec posuere metus vitae ipsum.',
+    title: 'Bojack denies being in crossover episode with Mr. Peanutbutter',
     post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
     user_id: 10
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
+    title: '10 Tips to get attention at parties like Erica',
     post_url: 'https://nasa.gov/donec.json',
     user_id: 8
   },
   {
-    title:
-      'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
+    title: 'Navy Seal Neal McBeal calls dibs on muffins ',
     post_url:
       'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
     user_id: 1
   },
   {
-    title: 'Nunc purus.',
+    title:
+      'Newtopia Rising, Book 1: The Search for a New Utopia due for a sequel',
     post_url: 'http://desdev.cn/enim/blandit/mi.jpg',
     user_id: 4
   },
   {
-    title: 'Pellentesque eget nunc.',
+    title: '10 Reasons to go to Vietnam: A Girl Croosh Personal Travel Guide. ',
     post_url: 'http://google.ca/nam/nulla/integer.aspx',
     user_id: 7
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    title: 'WhiteWhale takes ownership of Girl Croosh',
     post_url: 'https://stanford.edu/consequat.png',
     user_id: 4
   },
   {
-    title: 'In hac habitasse platea dictumst.',
+    title: 'Spronk!: the new face of Girl Croosh',
     post_url: 'http://edublogs.org/non/ligula/pellentesque.js',
     user_id: 1
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
+    title: 'The inside scoop on the new Untitled Princess Carolyn Project',
     post_url: 'http://ucla.edu/consequat/nulla.html',
     user_id: 1
   },
   {
-    title: 'Duis ac nibh.',
+    title: 'Bojack Horseman nominated for Oscar after release of Secretariat',
     post_url: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
     user_id: 9
   },
   {
-    title: 'Curabitur at ipsum ac tellus semper interdum.',
+    title: 'Ivy Tran: Food Court Detective hits shelves this weekend',
     post_url: 'https://reverbnation.com/ligula/sit.jpg',
     user_id: 5
   },
   {
-    title: 'In hac habitasse platea dictumst.',
+    title: 'Mr. Peanutbutter announces he is in support of Fracking!',
     post_url: 'http://china.com.cn/lectus/vestibulum.json',
     user_id: 3
   },
   {
-    title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
+    title: 'Bojack Memoir: "One Trick Pony" receives critical acclaim',
     post_url:
       'http://networksolutions.com/nam/ultrices/libero/non/mattis/pulvinar.json',
     user_id: 10
   },
   {
-    title: 'Donec dapibus.',
-    post_url: 'https://instagram.com/ac/neque/duis/bibendum/morbi/non.xml',
+    title:
+      'Daniel Radcliffe to guest star on this weeks "Hollywoo Stars and Celebrities: What Do They Know? Do They Know Things?? Lets Find Out!"',
+    post_url: 'https://www.youtube.com/watch?v=e1g_wNPmOsg',
     user_id: 8
   },
   {
-    title: 'Nulla tellus.',
-    post_url: 'https://lycos.com/natoque/penatibus/et.html',
+    title: 'WHAT TIME IS IT RIGHT NOW fires CEO Henry Fondle ',
+    post_url: 'https://www.whattimeisitrightnow.com/',
     user_id: 3
   },
   {
-    title:
-      'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
-    post_url: 'https://gmpg.org/lorem.jpg',
+    title: 'Wesleyan University seeking new Theater Professor',
+    post_url: 'https://www.wesleyan.edu/',
     user_id: 3
   },
   {
-    title:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
+    title: 'Sarah Lynns "Prickly Muffin" single reaches gold status',
     post_url: 'https://paginegialle.it/mattis/egestas.jsp',
     user_id: 7
   },
   {
-    title: 'In hac habitasse platea dictumst.',
+    title: 'Sextina Aquafina: the face of modern feminism',
     post_url: 'http://wikia.com/turpis/eget.jpg',
     user_id: 6
   },
   {
-    title: 'Etiam justo.',
-    post_url: 'https://shareasale.com/quis.json',
+    title: 'Birthday Dad: what is it really about?',
+    post_url: 'https://nestflix.fun/birthday-dad/',
     user_id: 4
   },
   {
-    title: 'Nulla ut erat id mauris vulputate elementum.',
-    post_url:
-      'http://java.com/diam/neque/vestibulum/eget/vulputate/ut/ultrices.png',
+    title: 'Andrew Garfield hates mondays and loves lasagna',
+    post_url: 'https://en.wikipedia.org/wiki/Garfield',
     user_id: 6
   },
   {
-    title:
-      'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-    post_url: 'https://java.com/at/nibh/in.png',
+    title: 'Vincent Adultman named sexiest man alive',
+    post_url: 'https://www.linkedin.com/in/vincent-adultman-87b6a0133/',
     user_id: 7
   }
 ];
