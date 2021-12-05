@@ -10,7 +10,6 @@ A CMS-style blog site for publishing articles, blog posts, thoughts, and opinion
 
 - [Preview](#Preview)
 - [Installation](#Installation)
-- [Database Schema](#Database-Schema)
 - [Tests](#Tests)
 - [Documentation](#Documentation)
 - [Feedback](#Feedback)
@@ -21,7 +20,7 @@ A CMS-style blog site for publishing articles, blog posts, thoughts, and opinion
 
 Here is how the application appears and functions.
 
-<img src='' />
+<img src='assets\hollywoo-blog.gif' />
 
 ## Installation
 
@@ -94,13 +93,13 @@ Finally, start the server from the command line:
 npm start
 ```
 
-## Database Schema
-
-<img src='images\db-schema.png' />
-
 ## Tests
 
 _This project used Jest for testing_
+
+<a href="https://jestjs.io/docs/getting-started">
+<img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" />
+</a>
 
 ## Documentation
 
@@ -108,6 +107,7 @@ _This project used Jest for testing_
 - [MySQL2](https://www.npmjs.com/package/mysql2)
 - [Express](https://expressjs.com/en/4x/api.html)
 - [Sequelize](https://sequelize.org/master/)
+- [Handlebars](https://handlebarsjs.com/guide/)
 
 ## Feedback
 
