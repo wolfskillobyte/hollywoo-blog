@@ -3,33 +3,33 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-    username: 'rumham1',
-    email: 'rumham1@cbc.ca',
+    username: 'sextina_aquafina',
+    email: 'h20blowhole@cbc.ca',
     password: 'password123'
   },
   {
-    username: 'jasonbateman',
-    email: 'jasonbateman56@sogou.com',
+    username: 'hollyhock8dads',
+    email: 'toomanylastnames@sogou.com',
     password: 'password123'
   },
   {
-    username: 'laurencefishburn',
+    username: 'sarah_lynn',
     email: 'laurencefishburn@last.fm',
     password: 'password123'
   },
   {
-    username: 'alefmoffat32',
-    email: 'alefmoffat32@goo.ne.jp',
+    username: 'beatrice_sugarman',
+    email: 'itsnoisben@goo.ne.jp',
     password: 'password123'
   },
   {
-    username: 'wolfgarrrb',
-    email: 'wolfskill@nasa.com',
+    username: 'stilton_cheese_heiress',
+    email: 'cheesequeen@nasa.com',
     password: 'password123'
   },
   {
-    username: 'mrasparagus',
-    email: 'smellypee@imdb.com',
+    username: 'pinkypenguin',
+    email: 'publishhouse@imdb.com',
     password: 'password123'
   },
   {
@@ -43,13 +43,13 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'dianenguyen',
+    username: 'diane_nguyen',
     email: 'impublished@google.ru',
     password: 'password123'
   },
   {
-    username: 'princesscarolyn',
-    email: 'untitledprincesscarolynproject@epa.gov',
+    username: 'princess_carolyn',
+    email: 'untitledpcproject@epa.gov',
     password: 'password123'
   }
 ];

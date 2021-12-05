@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Vote, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -9,7 +10,7 @@ router.get('/', (req, res) => {
     // Query configuration
     attributes: [
       'id',
-      'post_url',
+      'post_body',
       'title',
       'created_at',
       [
@@ -19,12 +20,12 @@ router.get('/', (req, res) => {
         'vote_count'
       ]
     ],
-    order: [['created_at', 'DESC']],
+    // order: [['created_at', 'DESC']],
     include: [
       // comment model
       {
         model: Comment,
-        attributes: ['id', 'post_url', 'title', 'created_at'],
+        attributes: ['id', 'post_body', 'title', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -51,7 +52,7 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_body',
       'title',
       'created_at',
       [
@@ -90,10 +91,10 @@ router.get('/:id', (req, res) => {
 });
 
 // CREATE post (post route)
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    post_body: req.body.post_body,
     user_id: req.session.user_id
   })
     .then((dbPostData) => res.json(dbPostData))
@@ -106,7 +107,7 @@ router.post('/', (req, res) => {
 // THIS ROUTE MUST GO BEFORE THE OTHER PUT ROUTES !!
 // 13.4.4: Otherwise, Express.js will think the word "upvote" is a valid parameter for /:id.
 // upvote route
-router.put('/upvote', (req, res) => {
+router.put('/upvote', withAuth, (req, res) => {
   // make sure the session exists first
   if (req.session) {
     // pass session id along with all destructured properties on req.body
@@ -123,7 +124,7 @@ router.put('/upvote', (req, res) => {
 });
 
 // UPDATE post title (put route)
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title
@@ -148,7 +149,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE post
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id
